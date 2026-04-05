@@ -10,23 +10,46 @@ if (mobileMenuToggle) {
 }
 
 // Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
+document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         mobileMenuToggle.classList.remove('active');
+        document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+    });
+});
+
+// Mobile dropdown toggles
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const parentLi = toggle.closest('.nav-dropdown');
+            const wasOpen = parentLi.classList.contains('open');
+            document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+            if (!wasOpen) parentLi.classList.add('open');
+        }
     });
 });
 
 // Set active navigation link based on current page
 document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
             link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    document.querySelectorAll('.dropdown-link').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+            const toggle = link.closest('.nav-dropdown').querySelector('.dropdown-toggle');
+            if (toggle) toggle.classList.add('active');
         } else {
             link.classList.remove('active');
         }
