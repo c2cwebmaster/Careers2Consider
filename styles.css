@@ -732,10 +732,119 @@ body {
     margin: 0;
 }
 
+/* Season 1 Careers Grid */
+.s1-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.s1-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.s1-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    width: 200px;
+}
+
+.s1-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid var(--gold-accent);
+    display: block;
+}
+
+.s1-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy-blue);
+    margin: 0;
+}
+
+.s1-link {
+    color: var(--navy-blue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+.s1-link:hover {
+    color: var(--primary-color);
+}
+
+.s1-role {
+    font-size: 0.78rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 500;
+}
+
+.s1-parts {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.2rem;
+}
+
+.s1-part-link {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    background: var(--primary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.s1-part-link:hover {
+    background: var(--navy-blue);
+}
+
+/* Season 1 Playlist Banner */
+.s1-playlist-banner-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 20px;
+    background: var(--bg-white);
+}
+
+.s1-playlist-banner {
+    display: inline-block;
+    padding: 1rem 4rem;
+    background: var(--gold-accent);
+    color: var(--navy-blue);
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 50px;
+    letter-spacing: 0.03em;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.s1-playlist-banner:hover {
+    background: var(--navy-blue);
+    color: white;
+}
+
 /* Careers Section */
 .careers-section {
-    padding: 100px 20px;
-    background: var(--bg-light);
+    padding: 30px 20px 100px;
+    background: var(--bg-white);
 }
 
 .careers-grid {
