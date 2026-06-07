@@ -38,4 +38,3 @@ Please add the following images to the `images/` directory:
 ## Social Media Links
 
 Update the YouTube and Instagram links in the navigation and hero sections to point to your actual social media accounts.
-hello
