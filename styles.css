@@ -814,6 +814,90 @@ body {
     background: var(--navy-blue);
 }
 
+/* Season 1 List Section */
+.s1-divider-line {
+    height: 4px;
+    background: #7EC8E3;
+    width: 100%;
+}
+
+.s1-list-section {
+    background: #E8F6FB;
+    padding: 0 20px 60px;
+}
+
+.s1-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.s1-list-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid #7EC8E3;
+}
+
+.s1-list-row:first-child {
+    border-top: none;
+    padding-top: 2rem;
+}
+
+.s1-list-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid var(--gold-accent);
+    flex-shrink: 0;
+}
+
+.s1-list-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.s1-list-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy-blue);
+    margin: 0;
+}
+
+.s1-list-role {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 500;
+}
+
+.s1-list-embed {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.s1-list-embed iframe {
+    width: 260px;
+    height: 146px;
+    border-radius: 8px;
+}
+
+.s1-list-bio {
+    flex: 1;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+}
+
 /* Season 1 Playlist Banner */
 .s1-playlist-banner-wrap {
     display: flex;
