@@ -9,6 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        a.s1-card {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        a.s1-card:hover {
+            transform: translateY(-4px);
+        }
+        a.s1-card:hover .s1-photo {
+            border-color: var(--navy-blue);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -79,48 +93,44 @@
             <div class="s1-grid">
                 <!-- Row 1 -->
                 <div class="s1-row">
-                    <div class="s1-card">
+                    <a href="#section-siv-etter" class="s1-card">
                         <img src="season1_pfp/siv_etter.jpg" alt="Siv Etter" class="s1-photo">
-                        <h3 class="s1-name"><a href="https://www.youtube.com/watch?v=tQsjgm4-hfc" target="_blank" rel="noopener noreferrer" class="s1-link">Siv Etter</a></h3>
+                        <h3 class="s1-name">Siv Etter</h3>
                         <p class="s1-role">Marine Biologist</p>
-                    </div>
-                    <div class="s1-card">
+                    </a>
+                    <a href="#section-malia-arrington" class="s1-card">
                         <img src="season1_pfp/malia_arrington.jpg" alt="Malia Arrington" class="s1-photo">
-                        <h3 class="s1-name"><a href="https://www.youtube.com/watch?v=1kvDdgH3KFE" target="_blank" rel="noopener noreferrer" class="s1-link">Malia Arrington</a></h3>
+                        <h3 class="s1-name">Malia Arrington</h3>
                         <p class="s1-role">Lawyer and Activist</p>
-                    </div>
-                    <div class="s1-card">
+                    </a>
+                    <a href="#section-sheila-rubin" class="s1-card">
                         <img src="season1_pfp/sheila_rubin.jpg" alt="Sheila Rubin" class="s1-photo">
-                        <h3 class="s1-name"><a href="https://www.youtube.com/watch?v=7y6Zv9wMpoA" target="_blank" rel="noopener noreferrer" class="s1-link">Sheila Rubin</a></h3>
+                        <h3 class="s1-name">Sheila Rubin</h3>
                         <p class="s1-role">Bharatanatyam Teacher</p>
-                    </div>
-                    <div class="s1-card">
+                    </a>
+                    <a href="#section-alice-yagolnitser" class="s1-card">
                         <img src="season1_pfp/alice_yagolnitser.jpg" alt="Alice Yagolnitser" class="s1-photo">
                         <h3 class="s1-name">Alice Yagolnitser</h3>
-                        <div class="s1-parts">
-                            <a href="https://www.youtube.com/watch?v=AcMmnZFKDE4" target="_blank" rel="noopener noreferrer" class="s1-part-link">Part 1</a>
-                            <a href="https://www.youtube.com/watch?v=KdMrEhgw_XU" target="_blank" rel="noopener noreferrer" class="s1-part-link">Part 2</a>
-                        </div>
                         <p class="s1-role">Accounting/Finance Pro<br>with Non-Profit Org</p>
-                    </div>
+                    </a>
                 </div>
                 <!-- Row 2 -->
                 <div class="s1-row">
-                    <div class="s1-card">
+                    <a href="#section-michael-muhonen" class="s1-card">
                         <img src="season1_pfp/michael_muhonen.jpg" alt="Dr. Michael Muhonen" class="s1-photo">
-                        <h3 class="s1-name"><a href="https://www.youtube.com/watch?v=YqM-fgou6pk" target="_blank" rel="noopener noreferrer" class="s1-link">Dr. Michael Muhonen</a></h3>
+                        <h3 class="s1-name">Dr. Michael Muhonen</h3>
                         <p class="s1-role">Neurosurgeon</p>
-                    </div>
-                    <div class="s1-card">
+                    </a>
+                    <a href="#section-jose-gil" class="s1-card">
                         <img src="season1_pfp/jose_gil.jpg" alt="Jose Gil" class="s1-photo">
-                        <h3 class="s1-name"><a href="https://www.youtube.com/watch?v=b4Qq2nR_uz8" target="_blank" rel="noopener noreferrer" class="s1-link">Jose Gil</a></h3>
+                        <h3 class="s1-name">Jose Gil</h3>
                         <p class="s1-role">Geologist</p>
-                    </div>
-                    <div class="s1-card">
+                    </a>
+                    <a href="#section-poornima-rao" class="s1-card">
                         <img src="season1_pfp/poornima_rao.jpg" alt="Poornima Rao" class="s1-photo">
-                        <h3 class="s1-name"><a href="https://www.youtube.com/watch?v=wSJTw51BIKA" target="_blank" rel="noopener noreferrer" class="s1-link">Poornima Rao</a></h3>
+                        <h3 class="s1-name">Poornima Rao</h3>
                         <p class="s1-role">Product Manager &amp; Veena Teacher</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -131,7 +141,7 @@
     <section class="s1-list-section">
         <div class="container">
             <div class="s1-list">
-                <div class="s1-list-row">
+                <div class="s1-list-row" id="section-siv-etter">
                     <img src="season1_pfp/siv_etter.jpg" alt="Siv Etter" class="s1-list-photo">
                     <div class="s1-list-info">
                         <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=tQsjgm4-hfc" target="_blank" rel="noopener noreferrer" class="s1-link">Siv Etter</a></h3>
@@ -142,7 +152,7 @@
                     </div>
                     <p class="s1-list-bio">After finishing her master's degree in marine biology at NTNU Siv Etter worked as a department engineer in the marine section at the Department of Biology, NTNU from 2009 - 2016. Subsequently, she started on her PhD with the working title: Cultivation potential of brown and red macroalgae species integrated with open Salmon fish Aquaculture. This PhD project aims to obtain new knowledge in cultivation technology for brown and red macroalgae species for use in Integrated Multi-Trophic Aquaculture (IMTA) to mitigate environmental problems related to sea-based aquaculture while obtaining added value of the feed investments of fish production. Since August 2020 Siv Etter has been a permanent member of the engineering crew at the Department of Biology working mainly at Trondhjem.</p>
                 </div>
-                <div class="s1-list-row">
+                <div class="s1-list-row" id="section-malia-arrington">
                     <img src="season1_pfp/malia_arrington.jpg" alt="Malia Arrington" class="s1-list-photo">
                     <div class="s1-list-info">
                         <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=1kvDdgH3KFE" target="_blank" rel="noopener noreferrer" class="s1-link">Malia Arrington</a></h3>
@@ -153,7 +163,7 @@
                     </div>
                     <p class="s1-list-bio">Malia Arrington is Executive Director of the Hollywood Commission on Eliminating Sexual Harassment and Advancing Equality. In this role, she provides leadership in all of the organization's activities, forging the solutions that will guide a fairer, safer industry for all workers. Arrington has dedicated her life to advancing human rights and ethics. She joined the Hollywood Commission in November 2018 after serving as its Chief Operating Officer of the nonprofit U.S. Center for SafeSport. In that post, she helped lead an organization dedicated to protecting athletes from emotional, physical, and sexual abuse. Earlier, Arrington served as Senior Director at the U.S. Olympic Committee, where she played a key role in developing SafeSport's mandate and policies. Arrington is also a Board Trustee of Safe Sport International, which is committed to expanding the tenets of SafeSport around the world. A graduate of Emory University and the University of Virginia School of Law, Arrington came to the field after practicing law in Denver and serving as a Judicial Intern at the International Criminal Tribunals for the former Yugoslavia and Rwanda.</p>
                 </div>
-                <div class="s1-list-row">
+                <div class="s1-list-row" id="section-sheila-rubin">
                     <img src="season1_pfp/sheila_rubin.jpg" alt="Sheila Rubin" class="s1-list-photo">
                     <div class="s1-list-info">
                         <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=7y6Zv9wMpoA" target="_blank" rel="noopener noreferrer" class="s1-link">Sheila Rubin</a></h3>
@@ -164,7 +174,7 @@
                     </div>
                     <p class="s1-list-bio">Sheila Rubin, founder/director of Natyananda, studied and performed Bharatanatyam for twelve years in India. Natyananda recently celebrated its 45th anniversary with a grand production, Guru Vandana. The Indian press gave her dance the highest praise as a member of the Bharata Kalanjali Dance Company. Her performances have taken her from the East to West coasts of the United States, and also to Europe, Central America, and the Bahamas. She has been acclaimed as a dancer whose artistic integrity and personal warmth of expression easily transcend all barriers. In 1987, she began to research and create new choreography, stretching the limits of this precise and well-developed art to clarify and communicate essential human truths. This work bore fruit in the production of dances and dance-dramas exploring inter-religious, moral, philosophical, ecological, and social themes. By creating new choreography with Spanish, Middle Eastern, African, Russian, Irish, and modern dance artists, she has explored and expressed artistically both commonalities and contrasts between cultures. She received an award in 2023 from the Soorya Foundation for lifetime achievement in BharataNatyam.</p>
                 </div>
-                <div class="s1-list-row">
+                <div class="s1-list-row" id="section-alice-yagolnitser">
                     <img src="season1_pfp/alice_yagolnitser.jpg" alt="Alice Yagolnitser" class="s1-list-photo">
                     <div class="s1-list-info">
                         <h3 class="s1-list-name">Alice Yagolnitser</h3>
@@ -176,7 +186,7 @@
                     </div>
                     <p class="s1-list-bio">As a licensed CPA (Certified Public Accountant) professional with 10+ years of experience, she has gained expertise at Deloitte's San Francisco office as an independent consultant for startups, leveraging her extensive knowledge of U.S. and international accounting standards. Currently, she leads technical accounting research and financial reporting at the rapidly growing blockchain gaming company, while supporting the accounting, finance, legal, and tax teams. Alice Yagolnitser is also an Angel Investor at Davidovs VC — a community-based venture capital rolling fund, focusing on investing in early-stage tech startups in Silicon Valley, founded by repeat founders. Beyond her work, she is proud to serve as a co-founder and president of Project Ukraine, a 501(c)(3) non-profit organization that has been providing crucial medical aid and equipment to Ukraine since the beginning of the full scale invasion.</p>
                 </div>
-                <div class="s1-list-row">
+                <div class="s1-list-row" id="section-michael-muhonen">
                     <img src="season1_pfp/michael_muhonen.jpg" alt="Dr. Michael Muhonen" class="s1-list-photo">
                     <div class="s1-list-info">
                         <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=YqM-fgou6pk" target="_blank" rel="noopener noreferrer" class="s1-link">Dr. Michael Muhonen</a></h3>
@@ -187,7 +197,7 @@
                     </div>
                     <p class="s1-list-bio">Dr. Muhonen is a neurosurgeon with over 30 years of experience specializing in pediatric brain disorders. He has conducted research on various conditions, including hydrocephalus, cerebral palsy, traumatic head injuries, spina bifida, brain tumors, and vascular malformations of the brain. He has also been involved in multiple clinical trials and research projects studying the outcomes of different treatments for these conditions. Dr. Muhonen is a recognized expert in the field, with numerous publications and presentations. He is board-certified in neurosurgery and pediatric neurosurgery, and was head of neurosurgery at Children's Hospital of Orange County for 28 years. He is also an associate clinical professor of neurosurgery at the University of California Irvine.</p>
                 </div>
-                <div class="s1-list-row">
+                <div class="s1-list-row" id="section-jose-gil">
                     <img src="season1_pfp/jose_gil.jpg" alt="Jose Gil" class="s1-list-photo">
                     <div class="s1-list-info">
                         <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=b4Qq2nR_uz8" target="_blank" rel="noopener noreferrer" class="s1-link">Jose Gil</a></h3>
@@ -198,7 +208,7 @@
                     </div>
                     <p class="s1-list-bio">Jose Gil was born in Maracaibo, Venezuela. For more than 30 years he has worked as a Geosciences specialist for oil companies in 3 continents: America, Africa and Europe. Specialist in the integration of geophysics and geology for the study of the location and configuration of rocks that act as oil and gas deposits. This involves knowledge of the elements that make up those rocks and the processes by which they become a container of raw material for the generation of energy from hydrocarbons. This also requires being well familiarized with the geological processes that shape the earth. Jose has been a university professor, but has also given talks and presentations in many elementary schools in Venezuela and USA to promote knowledge of geosciences to new generations in the threshold of moving from hydrocarbons to other sources of energy for humanity. Shell, CGG and HALLIBURTON are some of the most important companies for which he has worked, becoming recognized in his community as a specialist, having published technical articles that continue to be a reference for colleagues and students. He is currently a part-time substitute teacher for the Conroe ISD and a consultant for subsurface projects and studies for oil and gas exploration and development.</p>
                 </div>
-                <div class="s1-list-row">
+                <div class="s1-list-row" id="section-poornima-rao">
                     <img src="season1_pfp/poornima_rao.jpg" alt="Poornima Rao" class="s1-list-photo">
                     <div class="s1-list-info">
                         <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=wSJTw51BIKA" target="_blank" rel="noopener noreferrer" class="s1-link">Poornima Rao</a></h3>
@@ -221,6 +231,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a.s1-card').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (!target) return;
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + window.scrollY;
+                var offset = top - (window.innerHeight / 2) + (target.offsetHeight / 2);
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
 
