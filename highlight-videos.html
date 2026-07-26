@@ -9,6 +9,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .highlight-season {
+            padding: 60px 20px;
+        }
+        .highlight-season:nth-child(even) {
+            background: var(--bg-light, #f8f9fa);
+        }
+        .highlight-season-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .highlight-season-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin: 0 0 1.5rem 0;
+        }
+        .highlight-season-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--gold-accent);
+            margin-top: 0.5rem;
+            border-radius: 2px;
+        }
+        .highlight-placeholder {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        .highlight-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -33,8 +69,9 @@
                     </ul>
                 </li>
                 <li class="nav-dropdown">
-                    <a href="season2.html" class="nav-link dropdown-toggle">Season Videos <span class="dropdown-arrow">▾</span></a>
+                    <a href="season3.html" class="nav-link dropdown-toggle">Season Videos <span class="dropdown-arrow">▾</span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="season3.html" class="dropdown-link">Season 3</a></li>
                         <li><a href="season2.html" class="dropdown-link">Season 2</a></li>
                         <li><a href="season1.html" class="dropdown-link">Season 1</a></li>
                     </ul>
@@ -66,10 +103,41 @@
         </div>
     </section>
 
-    <!-- Highlight Videos Section -->
-    <section class="careers-section">
-        <div class="container">
-            <p style="text-align:center; color: var(--primary-color); font-size: 1rem; margin-top: 2rem;">Videos coming soon...</p>
+    <!-- Season 1 -->
+    <section class="highlight-season">
+        <div class="highlight-season-inner">
+            <h2 class="highlight-season-title">Season 1</h2>
+            <p class="highlight-placeholder">Season 1 highlight videos coming soon...</p>
+        </div>
+    </section>
+
+    <hr class="highlight-divider">
+
+    <!-- Season 2 -->
+    <section class="highlight-season">
+        <div class="highlight-season-inner">
+            <h2 class="highlight-season-title">Season 2</h2>
+            <p class="highlight-placeholder">Season 2 highlight videos coming soon...</p>
+        </div>
+    </section>
+
+    <hr class="highlight-divider">
+
+    <!-- Season 3 -->
+    <section class="highlight-season">
+        <div class="highlight-season-inner">
+            <h2 class="highlight-season-title">Season 3</h2>
+            <p class="highlight-placeholder">Season 3 highlight videos coming soon...</p>
+        </div>
+    </section>
+
+    <hr class="highlight-divider">
+
+    <!-- Season 4 -->
+    <section class="highlight-season">
+        <div class="highlight-season-inner">
+            <h2 class="highlight-season-title">Season 4</h2>
+            <p class="highlight-placeholder">Season 4 highlight videos coming soon...</p>
         </div>
     </section>
 

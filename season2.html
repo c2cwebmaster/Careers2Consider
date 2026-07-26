@@ -9,6 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        a.s1-card {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        a.s1-card:hover {
+            transform: translateY(-4px);
+        }
+        a.s1-card:hover .s1-photo {
+            border-color: var(--navy-blue);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -33,8 +47,9 @@
                     </ul>
                 </li>
                 <li class="nav-dropdown">
-                    <a href="season2.html" class="nav-link dropdown-toggle">Season Videos <span class="dropdown-arrow">▾</span></a>
+                    <a href="season3.html" class="nav-link dropdown-toggle">Season Videos <span class="dropdown-arrow">▾</span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="season3.html" class="dropdown-link">Season 3</a></li>
                         <li><a href="season2.html" class="dropdown-link">Season 2</a></li>
                         <li><a href="season1.html" class="dropdown-link">Season 1</a></li>
                     </ul>
@@ -68,7 +83,7 @@
 
     <!-- Season 2 Playlist Banner -->
     <div class="s1-playlist-banner-wrap">
-        <a href="#" target="_blank" rel="noopener noreferrer" class="s1-playlist-banner">
+        <a href="https://www.youtube.com/watch?v=gKRfi2DkS7w&list=PLXyyR7MmYAT0wnSOsBhIT8pCyBTADQHje" target="_blank" rel="noopener noreferrer" class="s1-playlist-banner">
             Season 2 Videos
         </a>
     </div>
@@ -79,13 +94,49 @@
             <div class="s1-grid">
                 <!-- Row 1 -->
                 <div class="s1-row">
-                    <!-- Add Season 2 cards here following the pattern below:
-                    <div class="s1-card">
-                        <img src="season2_pfp/name.jpg" alt="Name" class="s1-photo">
-                        <h3 class="s1-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Name</a></h3>
-                        <p class="s1-role">Role</p>
-                    </div>
-                    -->
+                    <a href="#section-terry-szuplat" class="s1-card">
+                        <img src="season2_pfp/Terry_Szuplat.avif" alt="Terry Szuplat" class="s1-photo">
+                        <h3 class="s1-name">Terry Szuplat</h3>
+                        <p class="s1-role">Presidential Speechwriter</p>
+                    </a>
+                    <a href="#section-anuveer-gill" class="s1-card">
+                        <img src="season2_pfp/Anuveer_Gill.avif" alt="Anuveer Gill" class="s1-photo">
+                        <h3 class="s1-name">Anuveer Gill</h3>
+                        <p class="s1-role">Technical Support Engineer</p>
+                    </a>
+                    <a href="#section-swapna-dutt" class="s1-card">
+                        <img src="season2_pfp/Swapna_Dutt.avif" alt="Swapna Dutt" class="s1-photo">
+                        <h3 class="s1-name">Swapna Dutt</h3>
+                        <p class="s1-role">Film Producer</p>
+                    </a>
+                    <a href="#section-terence-perdon" class="s1-card">
+                        <img src="season2_pfp/Terence_Perdon.avif" alt="Terence Perdon" class="s1-photo">
+                        <h3 class="s1-name">Terence Perdon</h3>
+                        <p class="s1-role">Middle School Math Teacher</p>
+                    </a>
+                </div>
+                <!-- Row 2 -->
+                <div class="s1-row">
+                    <a href="#section-al-agrawal" class="s1-card">
+                        <img src="season2_pfp/Al_Agarwal.avif" alt="Al Agrawal" class="s1-photo">
+                        <h3 class="s1-name">Al Agrawal</h3>
+                        <p class="s1-role">Cybersecurity Professional</p>
+                    </a>
+                    <a href="#section-seshagiri-rao-vellanki" class="s1-card">
+                        <img src="season2_pfp/Seshagiri_Rao_Vellanki.avif" alt="Seshagiri Rao Vellanki" class="s1-photo">
+                        <h3 class="s1-name">Seshagiri Rao Vellanki</h3>
+                        <p class="s1-role">Aerospace Scientist</p>
+                    </a>
+                    <a href="#section-suchita-rao" class="s1-card">
+                        <img src="season2_pfp/Suchita_Rao.avif" alt="Suchita Rao" class="s1-photo">
+                        <h3 class="s1-name">Suchita Rao</h3>
+                        <p class="s1-role">Educator/Principal</p>
+                    </a>
+                    <a href="#section-shaila-abdullah" class="s1-card">
+                        <img src="season2_pfp/Shaila_Abdullah.avif" alt="Shaila Abdullah" class="s1-photo">
+                        <h3 class="s1-name">Shaila Abdullah</h3>
+                        <p class="s1-role">Graphic Designer/Author</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -96,19 +147,94 @@
     <section class="s1-list-section">
         <div class="container">
             <div class="s1-list">
-                <!-- Add Season 2 list rows here following the pattern below:
-                <div class="s1-list-row">
-                    <img src="season2_pfp/name.jpg" alt="Name" class="s1-list-photo">
+                <div class="s1-list-row" id="section-terry-szuplat">
+                    <img src="season2_pfp/Terry_Szuplat.avif" alt="Terry Szuplat" class="s1-list-photo">
                     <div class="s1-list-info">
-                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Name</a></h3>
-                        <p class="s1-list-role">Role</p>
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Terry Szuplat</a></h3>
+                        <p class="s1-list-role">Presidential Speechwriter</p>
                     </div>
                     <div class="s1-list-embed">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Name" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Terry Szuplat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <p class="s1-list-bio">Bio text here.</p>
+                    <p class="s1-list-bio">Bio coming soon.</p>
                 </div>
-                -->
+                <div class="s1-list-row" id="section-anuveer-gill">
+                    <img src="season2_pfp/Anuveer_Gill.avif" alt="Anuveer Gill" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Anuveer Gill</a></h3>
+                        <p class="s1-list-role">Technical Support Engineer</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Anuveer Gill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Bio coming soon.</p>
+                </div>
+                <div class="s1-list-row" id="section-swapna-dutt">
+                    <img src="season2_pfp/Swapna_Dutt.avif" alt="Swapna Dutt" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Swapna Dutt</a></h3>
+                        <p class="s1-list-role">Film Producer</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Swapna Dutt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Bio coming soon.</p>
+                </div>
+                <div class="s1-list-row" id="section-terence-perdon">
+                    <img src="season2_pfp/Terence_Perdon.avif" alt="Terence Perdon" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Terence Perdon</a></h3>
+                        <p class="s1-list-role">Middle School Math Teacher</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Terence Perdon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Bio coming soon.</p>
+                </div>
+                <div class="s1-list-row" id="section-al-agrawal">
+                    <img src="season2_pfp/Al_Agarwal.avif" alt="Al Agrawal" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Al Agrawal</a></h3>
+                        <p class="s1-list-role">Cybersecurity Professional</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Al Agrawal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Bio coming soon.</p>
+                </div>
+                <div class="s1-list-row" id="section-seshagiri-rao-vellanki">
+                    <img src="season2_pfp/Seshagiri_Rao_Vellanki.avif" alt="Seshagiri Rao Vellanki" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Seshagiri Rao Vellanki</a></h3>
+                        <p class="s1-list-role">Aerospace Scientist</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Seshagiri Rao Vellanki" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Bio coming soon.</p>
+                </div>
+                <div class="s1-list-row" id="section-suchita-rao">
+                    <img src="season2_pfp/Suchita_Rao.avif" alt="Suchita Rao" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Suchita Rao</a></h3>
+                        <p class="s1-list-role">Educator/Principal</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Suchita Rao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Bio coming soon.</p>
+                </div>
+                <div class="s1-list-row" id="section-shaila-abdullah">
+                    <img src="season2_pfp/Shaila_Abdullah.avif" alt="Shaila Abdullah" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="YOUTUBE_URL" target="_blank" rel="noopener noreferrer" class="s1-link">Shaila Abdullah</a></h3>
+                        <p class="s1-list-role">Graphic Designer/Author</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Shaila Abdullah" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Bio coming soon.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -121,7 +247,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a.s1-card').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (!target) return;
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + window.scrollY;
+                var offset = top - (window.innerHeight / 2) + (target.offsetHeight / 2);
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
