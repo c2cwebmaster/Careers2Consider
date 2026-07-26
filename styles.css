@@ -903,12 +903,14 @@ body {
     margin: 0;
 }
 
-#section-alice-yagolnitser .s1-list-embed {
+#section-alice-yagolnitser .s1-list-embed,
+#section-shaila-abdullah .s1-list-embed {
     flex-direction: row;
     gap: 0.5rem;
 }
 
-#section-alice-yagolnitser .s1-list-embed iframe {
+#section-alice-yagolnitser .s1-list-embed iframe,
+#section-shaila-abdullah .s1-list-embed iframe {
     flex: 1;
     min-width: 0;
 }
