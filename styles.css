@@ -201,8 +201,24 @@ body {
 
 .social-links-nav {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.social-icons-row {
+    display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+.social-nav-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    white-space: nowrap;
 }
 
 .social-links-nav a {
@@ -640,8 +656,9 @@ body {
 
 /* Team Members Grid */
 .team-members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2.5rem;
     margin-top: 3rem;
     max-width: 1200px;
@@ -656,6 +673,8 @@ body {
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    flex: 0 1 340px;
+    min-width: 280px;
 }
 
 .team-member-card:hover {
