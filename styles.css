@@ -404,10 +404,6 @@ body {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 12px rgba(15, 23, 42, 0.15));
-    transition: transform 0.3s ease;
-}
-
-.main-logo:hover {
     transform: scale(1.05);
 }
 
