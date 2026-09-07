@@ -75,25 +75,32 @@ window.addEventListener('scroll', () => {
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form data
-        const formData = {
-            firstName: document.getElementById('firstName').value,
-            lastName: document.getElementById('lastName').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
-        
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', formData);
-        
-        // Show success message
-        alert('Thank you for your message! We will get back to you soon.');
-        
-        // Reset form
-        contactForm.reset();
+        const submitBtn = contactForm.querySelector('.submit-button');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Something went wrong. Please try again or email us directly at admin@careerstoconsider.org.');
+            }
+        } catch {
+            alert('Something went wrong. Please try again or email us directly at admin@careerstoconsider.org.');
+        }
+
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
     });
 }
 
