@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .highlight-season {
-            padding: 48px 20px;
+            padding: 48px 32px;
+            background: #fdf3e3;
         }
         .highlight-season:nth-child(even) {
-            background: var(--bg-light, #f8f9fa);
+            background: #f0d4a0;
         }
         .highlight-season-inner {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         .highlight-season-title {
@@ -25,6 +26,7 @@
             font-weight: 700;
             color: var(--navy-blue);
             margin: 0 0 1.5rem 0;
+            text-align: left;
         }
         .highlight-season-title::after {
             content: '';
@@ -43,6 +45,64 @@
             border: none;
             border-top: 1px solid #e5e7eb;
             margin: 0;
+        }
+        /* PFP nav row */
+        .article-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+        .article-nav-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .article-nav-card:hover .article-nav-photo {
+            border-color: var(--gold-accent);
+            transform: scale(1.05);
+        }
+        .article-nav-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .article-nav-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            text-align: center;
+            max-width: 90px;
+        }
+        /* Article grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 2.5rem;
+        }
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            scroll-margin-top: 80px;
+        }
+        .article-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            margin: 0;
+        }
+        .article-embed {
+            width: 100%;
+            height: 620px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -110,13 +170,56 @@
         </div>
     </section>
 
-    <!-- Video Playlists Banner -->
-    <section style="padding: 24px 20px; background: var(--light-bg); text-align: center; border-bottom: 1px solid var(--border-color);">
-        <div class="container">
-            <p style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 1rem;">Prefer watching over reading? Try our highlight videos instead!</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://www.youtube.com/playlist?list=PLNqOyTwR2FJs" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">Season 1 Playlist</a>
-                <a href="https://www.youtube.com/playlist?list=PLZYzuBMX7i9o" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">Season 2 Playlist</a>
+    <!-- Video Playlists Banner + PFP Nav -->
+    <section style="padding: 28px 32px; background: var(--light-bg); border-bottom: 1px solid var(--border-color);">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <!-- Playlist buttons -->
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <p style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 1rem;">Prefer watching over reading? Try our highlight videos instead!</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.youtube.com/playlist?list=PLNqOyTwR2FJs" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">Season 1 Playlist</a>
+                    <a href="https://www.youtube.com/playlist?list=PLZYzuBMX7i9o" target="_blank" rel="noopener noreferrer" class="cta-button" style="font-size: 0.9rem; padding: 0.6rem 1.4rem;">Season 2 Playlist</a>
+                </div>
+            </div>
+            <!-- PFP nav split by season -->
+            <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <div>
+                    <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary-color); margin: 0 0 0.75rem 0;">Season 1</p>
+                    <div class="article-nav" style="margin-bottom: 0;">
+                        <a class="article-nav-card" href="#article-poornima-rao">
+                            <img src="season1_pfp/poornima_rao.jpg" alt="Poornima Rao" class="article-nav-photo">
+                            <span class="article-nav-name">Poornima Rao</span>
+                        </a>
+                        <a class="article-nav-card" href="#article-michael-muhonen">
+                            <img src="season1_pfp/michael_muhonen.jpg" alt="Michael Muhonen" class="article-nav-photo">
+                            <span class="article-nav-name">Michael Muhonen</span>
+                        </a>
+                    </div>
+                </div>
+                <div style="width: 1px; background: var(--border-color); align-self: stretch;"></div>
+                <div>
+                    <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary-color); margin: 0 0 0.75rem 0;">Season 2</p>
+                    <div class="article-nav" style="margin-bottom: 0;">
+                        <a class="article-nav-card" href="#article-al-agrawal">
+                            <img src="season2_pfp/Al_Agarwal.avif" alt="Al Agrawal" class="article-nav-photo">
+                            <span class="article-nav-name">Al Agrawal</span>
+                        </a>
+                        <a class="article-nav-card" href="#article-arpita-judy">
+                            <img src="season2_pfp/Arpita_Judy.avif" alt="Arpita Judy" class="article-nav-photo">
+                            <span class="article-nav-name">Arpita Judy</span>
+                        </a>
+                        <div class="article-nav-card" style="cursor: default;">
+                            <a href="#article-terry-szuplat-1" style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem; text-decoration: none;">
+                                <img src="season2_pfp/Terry_Szuplat.avif" alt="Terry Szuplat" class="article-nav-photo">
+                                <span class="article-nav-name">Terry Szuplat</span>
+                            </a>
+                            <div style="display: flex; gap: 0.4rem; margin-top: 0.2rem;">
+                                <a href="#article-terry-szuplat-1" style="font-size: 0.72rem; font-weight: 700; color: var(--primary-color); background: var(--light-bg); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.15rem 0.5rem; text-decoration: none;">#1</a>
+                                <a href="#article-terry-szuplat-2" style="font-size: 0.72rem; font-weight: 700; color: var(--primary-color); background: var(--light-bg); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.15rem 0.5rem; text-decoration: none;">#2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -125,7 +228,17 @@
     <section class="highlight-season">
         <div class="highlight-season-inner">
             <h2 class="highlight-season-title">Season 1</h2>
-            <p class="highlight-placeholder">Season 1 highlight articles coming soon...</p>
+            <div>
+            <div class="article-grid">
+                <div class="article-card" id="article-poornima-rao">
+                    <p class="article-label">Poornima Rao &mdash; Highlight Article</p>
+                    <iframe src="Highlight%20Articles%20Season%201/Poornima%20Rao%20HV%20Article%20%231%20Only%20Formatted.pdf#toolbar=0&navpanes=0" class="article-embed" title="Poornima Rao Highlight Article"></iframe>
+                </div>
+                <div class="article-card" id="article-michael-muhonen">
+                    <p class="article-label">Michael Muhonen &mdash; Highlight Article</p>
+                    <iframe src="Highlight%20Articles%20Season%201/Michael%20Muhonen%20HV%20article%20Formatted%20Only.pdf#toolbar=0&navpanes=0" class="article-embed" title="Michael Muhonen Highlight Article"></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -134,7 +247,24 @@
     <section class="highlight-season">
         <div class="highlight-season-inner">
             <h2 class="highlight-season-title">Season 2</h2>
-            <p class="highlight-placeholder">Season 2 highlight articles coming soon...</p>
+            <div class="article-grid">
+                <div class="article-card" id="article-al-agrawal">
+                    <p class="article-label">Al Agrawal &mdash; Highlight Article</p>
+                    <iframe src="Highlight%20Articles%20Season%202/Al%20Agrawal%20HV%20Article%20Only%20Formatted.pdf#toolbar=0&navpanes=0" class="article-embed" title="Al Agrawal Highlight Article"></iframe>
+                </div>
+                <div class="article-card" id="article-arpita-judy">
+                    <p class="article-label">Arpita Judy &mdash; Highlight Article</p>
+                    <iframe src="Highlight%20Articles%20Season%202/Arpita%20Judy%20HV%20Article%20Only%20Formatted.pdf#toolbar=0&navpanes=0" class="article-embed" title="Arpita Judy Highlight Article"></iframe>
+                </div>
+                <div class="article-card" id="article-terry-szuplat-1">
+                    <p class="article-label">Terry Szuplat #1 &mdash; Highlight Article</p>
+                    <iframe src="Highlight%20Articles%20Season%202/Terry%20Szuplat%20%231%20HV%20Article%20Only%20Formatted.pdf#toolbar=0&navpanes=0" class="article-embed" title="Terry Szuplat Highlight Article 1"></iframe>
+                </div>
+                <div class="article-card" id="article-terry-szuplat-2">
+                    <p class="article-label">Terry Szuplat #2 &mdash; Highlight Article</p>
+                    <iframe src="Highlight%20Articles%20Season%202/Terry%20Szuplat%20%232%20HV%20Article%20Only%20Formatted.pdf#toolbar=0&navpanes=0" class="article-embed" title="Terry Szuplat Highlight Article 2"></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -164,5 +294,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#article-"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    var offset = target.getBoundingClientRect().top + window.scrollY - 90;
+                    window.scrollTo({ top: offset, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
