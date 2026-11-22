@@ -21,6 +21,8 @@ document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-link').for
 // Mobile dropdown toggles
 document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
     toggle.addEventListener('click', (e) => {
+        // Toggles marked no-nav only open their dropdown; clicking them never leaves the page
+        if (toggle.classList.contains('no-nav')) e.preventDefault();
         if (window.innerWidth <= 768) {
             e.preventDefault();
             const parentLi = toggle.closest('.nav-dropdown');
