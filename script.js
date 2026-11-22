@@ -10,12 +10,17 @@ if (mobileMenuToggle) {
 }
 
 // Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-link').forEach(link => {
+document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-link:not(.submenu-toggle)').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         mobileMenuToggle.classList.remove('active');
         document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
     });
+});
+
+// Submenu labels (e.g. "Full Interviews") only reveal their submenu; they don't navigate
+document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => e.preventDefault());
 });
 
 // Mobile dropdown toggles
@@ -107,8 +112,10 @@ if (contactForm) {
 }
 
 // Intersection Observer for fade-in animations
+// threshold 0: reveal as soon as any part of a section is on screen, so very tall
+// sections (like the interns grid) don't stay hidden until you scroll
 const observerOptions = {
-    threshold: 0.1,
+    threshold: 0,
     rootMargin: '0px 0px -50px 0px'
 };
 
@@ -125,6 +132,8 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section:not(.hero)');
     sections.forEach(section => {
+        // Sections already on the first screen show immediately; only ones below fade in
+        if (section.getBoundingClientRect().top < window.innerHeight) return;
         section.style.opacity = '0';
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
