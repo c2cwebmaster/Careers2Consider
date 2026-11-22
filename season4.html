@@ -22,51 +22,25 @@
         a.s1-card:hover .s1-photo {
             border-color: var(--navy-blue);
         }
-        .release-box {
-            max-width: 620px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-            background: #dbeafe;
-            border-radius: 16px;
+        .s4-photo-placeholder {
+            object-fit: contain;
+            object-position: center;
+            background: #ffffff;
+            padding: 12%;
+            box-sizing: border-box;
         }
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .countdown[hidden] {
-            display: none;
-        }
-        .countdown-unit {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 90px;
-            padding: 1rem 0.75rem;
+        .s4-video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
             background: var(--navy-blue);
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
-        }
-        .countdown-unit span {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 1;
-            font-variant-numeric: tabular-nums;
-        }
-        .countdown-unit small {
-            margin-top: 0.4rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
             color: var(--gold-accent);
-        }
-        .countdown-done {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--navy-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -135,26 +109,166 @@
         </div>
     </section>
 
-    <!-- Coming Soon -->
-    <section class="contact-section" style="text-align: center;">
+    <!-- Season 4 Playlist Banner -->
+    <div class="s1-playlist-banner-wrap">
+        <a href="https://www.youtube.com/playlist?list=PLF99hI8TauVs" target="_blank" rel="noopener noreferrer" class="s1-playlist-banner">
+            Season 4 Videos
+        </a>
+    </div>
+
+    <!-- Interviewee Interest Link -->
+    <div style="text-align:center; padding: 0.75rem 20px 0;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuzWP0uRRmpA92XiLmuYjYR4IUHMQctx27GhhIwopSrIZDxA/viewform" target="_blank" rel="noopener noreferrer" style="font-size:1.25rem; color:var(--navy-blue); text-decoration:underline; font-style:italic;">Don't see a career you want?</a>
+    </div>
+
+    <!-- Careers Section -->
+    <section class="careers-section">
         <div class="container">
-            <h2 style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 700; color: var(--navy-blue); margin-bottom: 1rem;">Coming Soon</h2>
-            <p style="font-size: 1.15rem; color: var(--text-light); margin-bottom: 2rem;">Season 4 interviews are on the way. Check back soon!</p>
-
-            <!-- Release Date + Countdown -->
-            <div class="release-box">
-                <p style="font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary-color); margin-bottom: 0.5rem;">Release Date</p>
-                <p style="font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: #000000; margin-bottom: 1.5rem;">October 24th</p>
-                <div id="countdown" class="countdown">
-                    <div class="countdown-unit"><span id="cd-days">--</span><small>Days</small></div>
-                    <div class="countdown-unit"><span id="cd-hours">--</span><small>Hours</small></div>
-                    <div class="countdown-unit"><span id="cd-minutes">--</span><small>Minutes</small></div>
-                    <div class="countdown-unit"><span id="cd-seconds">--</span><small>Seconds</small></div>
+            <div class="s1-grid">
+                <!-- Row 1 -->
+                <div class="s1-row">
+                    <a href="#section-nicole-grob" class="s1-card">
+                        <img src="season4_pfp/Nicole_Grob_crop.jpg" alt="Nicole Grob" class="s1-photo">
+                        <h3 class="s1-name">Nicole Grob</h3>
+                        <p class="s1-role">Environmental Scientist</p>
+                    </a>
+                    <a href="#section-vaughn-brinegar" class="s1-card">
+                        <img src="season4_pfp/Vaughn_Brinegar_crop.jpg" alt="Dr. Vaughn Brinegar" class="s1-photo">
+                        <h3 class="s1-name">Dr. Vaughn Brinegar</h3>
+                        <p class="s1-role">Optometrist</p>
+                    </a>
+                    <a href="#section-vrajesh-karkhanis" class="s1-card">
+                        <img src="season4_pfp/Vrajesh_Karkhanis_crop.jpg" alt="Vrajesh Karkhanis" class="s1-photo">
+                        <h3 class="s1-name">Vrajesh Karkhanis</h3>
+                        <p class="s1-role">Cancer Researcher</p>
+                    </a>
+                    <a href="#section-stephen-gauvain" class="s1-card">
+                        <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Stephen Gauvain" class="s1-photo s4-photo-placeholder">
+                        <h3 class="s1-name">Stephen Gauvain</h3>
+                        <p class="s1-role">NASA Crew Trainer</p>
+                    </a>
                 </div>
-                <p id="countdown-done" class="countdown-done" hidden>Season 4 is out now!</p>
+                <!-- Row 2 -->
+                <div class="s1-row">
+                    <a href="#section-ashima-aggarwal" class="s1-card">
+                        <img src="season4_pfp/Ashima_Aggarwal_crop.jpg" alt="Dr. Ashima Aggarwal" class="s1-photo">
+                        <h3 class="s1-name">Dr. Ashima Aggarwal</h3>
+                        <p class="s1-role">Speech Pathologist</p>
+                    </a>
+                    <a href="#section-coming-soon-6" class="s1-card">
+                        <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Coming soon" class="s1-photo s4-photo-placeholder">
+                        <h3 class="s1-name">Coming Soon</h3>
+                        <p class="s1-role">&nbsp;</p>
+                    </a>
+                    <a href="#section-coming-soon-7" class="s1-card">
+                        <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Coming soon" class="s1-photo s4-photo-placeholder">
+                        <h3 class="s1-name">Coming Soon</h3>
+                        <p class="s1-role">&nbsp;</p>
+                    </a>
+                    <a href="#section-coming-soon-8" class="s1-card">
+                        <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Coming soon" class="s1-photo s4-photo-placeholder">
+                        <h3 class="s1-name">Coming Soon</h3>
+                        <p class="s1-role">&nbsp;</p>
+                    </a>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <a href="season3.html" class="cta-button" style="margin-top: 2.5rem;">Watch Season 3</a>
+    <!-- Season 4 List Section -->
+    <div class="s1-divider-line"></div>
+    <section class="s1-list-section">
+        <div class="container">
+            <div class="s1-list">
+                <div class="s1-list-row" id="section-nicole-grob">
+                    <img src="season4_pfp/Nicole_Grob_crop.jpg" alt="Nicole Grob" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=DklWzMDBMuI&amp;t=374s" target="_blank" rel="noopener noreferrer" class="s1-link">Nicole Grob</a></h3>
+                        <p class="s1-list-role">Environmental Scientist</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/DklWzMDBMuI" title="Nicole Grob" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Nicole Grob is passionate about protecting our rivers and lakes. Ms. Grob has a bachelor's degree in fisheries and aquatic sciences as well as a wetland delineation certification. She has worked for both the Utah and Colorado state departments of natural resources as a fisheries technician. She later went on to be a lab manager at Texas State University, working with freshwater mussels, and is now an environmental scientist for a Texas river authority.</p>
+                </div>
+                <div class="s1-list-row" id="section-vaughn-brinegar">
+                    <img src="season4_pfp/Vaughn_Brinegar_crop.jpg" alt="Dr. Vaughn Brinegar" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=3iop-URC-sU" target="_blank" rel="noopener noreferrer" class="s1-link">Dr. Vaughn Brinegar</a></h3>
+                        <p class="s1-list-role">Optometrist</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/3iop-URC-sU" title="Dr. Vaughn Brinegar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Dr. Vaughn Brinegar is a Therapeutic Optometrist (Optometric Glaucoma Specialist) and has been providing comprehensive eye care since 2003. She is dedicated to helping patients achieve their best possible vision through advanced clinical care and the latest treatment options. She has extensive experience in the diagnosis and management of glaucoma and other ocular diseases, with a special interest in specialty contact lens fitting for patients with complex visual needs.<br><br>Dr. Brinegar is highly experienced in fitting scleral lenses for patients with keratoconus, irregular corneas, and post-surgical corneas, helping many individuals achieve comfortable vision when traditional contact lenses are no longer an option. She also fits a wide range of specialty contact lenses tailored to each patient’s unique needs.<br><br>Dr. Brinegar believes in combining compassionate patient care with the latest advances in eye care technology to provide personalized treatment plans for patients of all ages.</p>
+                </div>
+                <div class="s1-list-row" id="section-vrajesh-karkhanis">
+                    <img src="season4_pfp/Vrajesh_Karkhanis_crop.jpg" alt="Vrajesh Karkhanis" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=fGwwfKwyO2Y&amp;t=8s" target="_blank" rel="noopener noreferrer" class="s1-link">Vrajesh Karkhanis</a></h3>
+                        <p class="s1-list-role">Cancer Researcher</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/fGwwfKwyO2Y" title="Vrajesh Karkhanis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Vrajesh Karkhanis is a scientist and Data Manager at Baylor College of Medicine/Texas Children’s Hospital.</p>
+                </div>
+                <div class="s1-list-row" id="section-stephen-gauvain">
+                    <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Stephen Gauvain" class="s1-list-photo s4-photo-placeholder">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=9qbfhqwOAH0" target="_blank" rel="noopener noreferrer" class="s1-link">Stephen Gauvain</a></h3>
+                        <p class="s1-list-role">NASA Crew Trainer</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/9qbfhqwOAH0" title="Stephen Gauvain" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">Stephen Gauvain is a Professional Technical Individual providing 14 years of experience in Project Management of multi-disciplinary engineering tasks, Instructing, Real-Time Flight Operations, and Product Development for NASA. He simultaneously carried out two other job positions in addition to his primary task. Gauvain achieved a Silver Snoopy award, given to less than 1% of the NASA workforce for outstanding work achievements. He subscribes to the foundations of NASA’s Mission Operations: Discipline, Competence, Confidence, Responsibility, Toughness, Teamwork, and Vigilance.</p>
+                </div>
+                <div class="s1-list-row" id="section-ashima-aggarwal">
+                    <img src="season4_pfp/Ashima_Aggarwal_crop.jpg" alt="Dr. Ashima Aggarwal" class="s1-list-photo">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name"><a href="https://www.youtube.com/watch?v=1M7Zsfx_tZY&amp;t=21s" target="_blank" rel="noopener noreferrer" class="s1-link">Dr. Ashima Aggarwal</a></h3>
+                        <p class="s1-list-role">Speech Pathologist</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <iframe src="https://www.youtube.com/embed/1M7Zsfx_tZY" title="Dr. Ashima Aggarwal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="s1-list-bio">With over eight years of experience as a Speech-Language Pathologist (SLP), Dr. Ashima Aggarwal is dedicated to helping students develop the communication skills they need to succeed academically, socially, and beyond. She earned her Ph.D. in Linguistics from the University of Florida and her Master's degree in Speech-Language Pathology from The Ohio State University, bringing together a strong foundation in both the science of language and evidence-based clinical practice.<br><br>Dr. Aggarwal has experience providing speech and language services to K–12 students with diverse communication needs in school settings. She collaborates with educators, families, and multidisciplinary teams to deliver individualized, evidence-based therapy that supports each student's communication and academic success. Dr. Aggarwal is committed to creating inclusive, supportive environments where every child has the opportunity to communicate effectively and thrive.</p>
+                </div>
+                <div class="s1-list-row" id="section-coming-soon-6">
+                    <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Coming soon" class="s1-list-photo s4-photo-placeholder">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name">Coming Soon</h3>
+                        <p class="s1-list-role">Interview coming soon</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <div class="s4-video-placeholder">Coming soon</div>
+                    </div>
+                    <p class="s1-list-bio">Stay tuned! More Season 4 interviews are on the way.</p>
+                </div>
+                <div class="s1-list-row" id="section-coming-soon-7">
+                    <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Coming soon" class="s1-list-photo s4-photo-placeholder">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name">Coming Soon</h3>
+                        <p class="s1-list-role">Interview coming soon</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <div class="s4-video-placeholder">Coming soon</div>
+                    </div>
+                    <p class="s1-list-bio">Stay tuned! More Season 4 interviews are on the way.</p>
+                </div>
+                <div class="s1-list-row" id="section-coming-soon-8">
+                    <img src="Logo_-_Compass_Only__Centered___1_-removebg-preview.avif" alt="Coming soon" class="s1-list-photo s4-photo-placeholder">
+                    <div class="s1-list-info">
+                        <h3 class="s1-list-name">Coming Soon</h3>
+                        <p class="s1-list-role">Interview coming soon</p>
+                    </div>
+                    <div class="s1-list-embed">
+                        <div class="s4-video-placeholder">Coming soon</div>
+                    </div>
+                    <p class="s1-list-bio">Stay tuned! More Season 4 interviews are on the way.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -167,35 +281,16 @@
 
     <script src="script.js"></script>
     <script>
-        (function () {
-            // Midnight on October 24, 2026 in the visitor's own time zone (month is 0-based)
-            var release = new Date(2026, 9, 24, 0, 0, 0);
-            var box = document.getElementById('countdown');
-            var done = document.getElementById('countdown-done');
-            var els = {
-                d: document.getElementById('cd-days'),
-                h: document.getElementById('cd-hours'),
-                m: document.getElementById('cd-minutes'),
-                s: document.getElementById('cd-seconds')
-            };
-            function pad(n) { return n < 10 ? '0' + n : String(n); }
-            function tick() {
-                var diff = release - new Date();
-                if (diff <= 0) {
-                    box.hidden = true;
-                    done.hidden = false;
-                    clearInterval(timer);
-                    return;
-                }
-                var secs = Math.floor(diff / 1000);
-                els.d.textContent = Math.floor(secs / 86400);
-                els.h.textContent = pad(Math.floor(secs % 86400 / 3600));
-                els.m.textContent = pad(Math.floor(secs % 3600 / 60));
-                els.s.textContent = pad(secs % 60);
-            }
-            var timer = setInterval(tick, 1000);
-            tick();
-        })();
+        document.querySelectorAll('a.s1-card').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (!target) return;
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + window.scrollY;
+                var offset = top - (window.innerHeight / 2) + (target.offsetHeight / 2);
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
